@@ -25,9 +25,13 @@ command /test:
 # ON EVENTS
 
 on break of mushroom:
-  cancel event
-  give player mushroom
-  send "&c&L+ 1"
+  trigger:
+    cancel event
+    give player mushroom
+    send "&c&L+ 1"
+end  
   
 on break of glass:
-  give player glass
+  trigger:
+    give player glass
+end
