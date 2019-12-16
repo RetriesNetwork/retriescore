@@ -1,0 +1,23 @@
+# this is a test
+#
+#
+
+on join:
+  send "&7[&6+&7] {player's displayname}
+
+on leave
+  send "&7[&6-7] {player's displayname}
+
+command /retriescore:reload:
+  permission: retries.core.reload
+  permission message: &cCommand is blocked.
+          trigger:
+          send "&7[&6RETRIES&7] &eReloading core..."
+          execute sk reload core.sk
+          send "&7[&6RETRIES&7] &eReloaded."
+          
+command /test:
+  permission: retries.admin.developer
+  permission message: &cNothing to see here.
+          trigger:
+          send "&7[&6RETIRES&7] &eTest completed.
