@@ -21,3 +21,13 @@ command /test:
   permission message: &cNothing to see here.
           trigger:
           send "&7[&6RETIRES&7] &eTest completed.
+
+# ON EVENTS
+
+on break of mushroom:
+  cancel event
+  give player mushroom
+  send "&c&L+ 1"
+  
+on break of glass:
+  give player glass
