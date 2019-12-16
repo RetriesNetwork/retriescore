@@ -1,5 +1,10 @@
 # this is a test
 #
+
+ on chat:
+  cancel event
+  broadcast &7: {Player's DisplayName} > {Player's Message}
+
 #
 
 on join:
@@ -7,6 +12,8 @@ on join:
 
 on leave
   send "&7[&6-7] {player's displayname}
+
+#
 
 command /retriescore:reload:
   permission: retries.core.reload
@@ -23,6 +30,9 @@ command /test:
           send "&7[&6RETIRES&7] &eTest completed.
 
 # ON EVENTS
+command /thegods:zues
+  trigger:
+    message "&c&LZUES &eis coming..."
 
 on break of mushroom:
   trigger:
@@ -35,3 +45,21 @@ on break of glass:
   trigger:
     give player glass
 end
+
+on first time join event:
+   trigger:
+    broadcast "&7[&c&l+&7] Welcome {player's name} to the &7[&6RETRIES&7]."
+    
+on break of wheat:
+    trigger:
+      cancel event
+      message "&7[&eWHEAT&7] &eNOT TODAY!
+      
+#
+
+command /rules:
+  trigger:
+    message "&7| &eRULES OF RETRIES &7|"
+    message "NO BULLYING AND/OR HARRASING OTHERS!"
+    message
+    message
